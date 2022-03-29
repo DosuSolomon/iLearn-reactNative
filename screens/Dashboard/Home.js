@@ -1,7 +1,14 @@
 import React from "react";
 import { View, Text, ImageBackground, ScrollView, Image } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import { IconButton, TextButton } from "../../components";
+import {
+  IconButton,
+  TextButton,
+  VerticalCourseCard,
+  LineDivider,
+  CategoryCard,
+  HorizontalCourseCard,
+} from "../../components";
 import {
   COLORS,
   FONTS,
@@ -10,6 +17,31 @@ import {
   images,
   dummyData,
 } from "../../constants";
+
+const Section = ({ containerStyle, title, onPress, children }) => {
+  return (
+    <View style={{ ...containerStyle }}>
+      <View
+        style={{
+          flexDirection: "row",
+          paddingHorizontal: SIZES.padding,
+        }}
+      >
+        <Text style={{ flex: 1, ...FONTS.h2 }}>{title}</Text>
+        <TextButton
+          contentContainerStyle={{
+            width: 80,
+            borderRadius: 30,
+            backgroundColor: COLORS.primary,
+          }}
+          label="See All"
+          onPress={onPress}
+        />
+      </View>
+      {children}
+    </View>
+  );
+};
 
 const Home = () => {
   function renderHeader() {
@@ -92,6 +124,84 @@ const Home = () => {
       </ImageBackground>
     );
   }
+  function renderCourse() {
+    return (
+      <FlatList
+        horizontal
+        data={dummyData.courses_list_1}
+        listKey="Courses"
+        keyExtractor={(item) => `Courses-${item.id}`}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+          marginTop: SIZES.padding,
+        }}
+        renderItem={({ item, index }) => (
+          <VerticalCourseCard
+            containerStyle={{
+              marginLeft: index == 0 ? SIZES.padding : SIZES.radius,
+              marginRight:
+                index == dummyData.courses_list_1.length - 1
+                  ? SIZES.padding
+                  : 0,
+            }}
+            course={item}
+          />
+        )}
+      />
+    );
+  }
+
+  function renderCategories() {
+    return (
+      <Section title="Categories">
+        <FlatList
+          horizontal
+          data={dummyData.categories}
+          listKey="Categories"
+          keyExtractor={(item) => `Categories-${item.id}`}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{ marginTop: SIZES.radius }}
+          renderItem={({ item, index }) => (
+            <CategoryCard
+              category={item}
+              containerStyle={{
+                marginLeft: index == 0 ? SIZES.padding : SIZES.base,
+                marginRight:
+                  index == dummyData.categories.length - 1 ? SIZES.padding : 0,
+              }}
+            />
+          )}
+        />
+      </Section>
+    );
+  }
+  function renderPopularCourses() {
+    return (
+      <Section title="Popular Courses" containerStyle={{ marginTop: 30 }}>
+        <FlatList
+          data={dummyData.courses_list_2}
+          listKey="PopularCourses"
+          keyExtractor={(item) => `PopularCourses-${item.id}`}
+          contentContainerStyle={{
+            marginTop: SIZES.radius,
+            paddingHorizontal: SIZES.padding,
+          }}
+          renderItem={({ item, index }) => (
+            <HorizontalCourseCard
+              course={item}
+              containerStyle={{
+                marginVertical: SIZES.padding,
+                marginTop: index == 0 ? SIZES.radius : SIZES.padding,
+              }}
+            />
+          )}
+          ItemSeparatorComponent={()=> (
+            <LineDivider lineStyle={{backgroundColor: COLORS.gray20}} />
+          )}
+        />
+      </Section>
+    );
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -104,6 +214,14 @@ const Home = () => {
       >
         {/* Start Learning */}
         {renderStartLearning()}
+
+        {/* Courses */}
+        {renderCourse()}
+        <LineDivider lineStyle={{ marginVertical: SIZES.padding }} />
+        {/* Categories */}
+        {renderCategories()}
+        {/* Popular courses */}
+        {renderPopularCourses()}
       </ScrollView>
     </View>
   );
