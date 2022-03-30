@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, Animated } from "react-native";
-import { Home, Profile, Search } from "../../screens";
 import { COLORS, SIZES, FONTS, constants } from "../../constants";
+import { Home, Profile, Search } from "../../screens";
 import { Shadow } from "react-native-shadow-2";
 
 const bottom_tabs = constants.bottom_tabs.map((bottom_tabs) => ({

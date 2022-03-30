@@ -13,7 +13,7 @@ import { TextButton, CategoryCard } from "../../components";
 import { COLORS, SIZES, FONTS, icons, dummyData } from "../../constants";
 
 const Search = () => {
-  const scrollView = React.useRef();
+  const scrollViewRef = React.useRef();
   const scrollY = useSharedValue(0);
   const onScroll = useAnimatedScrollHandler((event) => {
     scrollY.value = event.contentOffset.y;
@@ -163,7 +163,7 @@ const Search = () => {
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
       <Animated.ScrollView
-        ref={scrollView}
+        ref={scrollViewRef}
         contentContainerStyle={{
           marginTop: 100,
           paddingBottom: 300,

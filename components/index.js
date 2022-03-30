@@ -1,17 +1,24 @@
 import CategoryCard from "./CategoryCard";
-import IconButton from "./IconButton";
-import TextButton from "./TextButton";
-import LineDivider from "./LineDivider";
-import VerticalCourseCard from "./VerticalCourseCard";
-import IconLabel from "./IconLabel";
 import HorizontalCourseCard from "./HorizontalCourseCard";
+import IconButton from "./IconButton";
+import IconLabel from "./IconLabel";
+import LineDivider from "./LineDivider";
+import ProfileRadioButton from "./ProfileRadioButton";
+import ProfileValue from "./ProfileValue";
+import ProgressBar from "./ProgressBar";
+import TextButton from "./TextButton";
+import VerticalCourseCard from "./VerticalCourseCard";
+
 
 export {
   CategoryCard,
+  HorizontalCourseCard,
   IconButton,
-  TextButton,
-  VerticalCourseCard,
   IconLabel,
   LineDivider,
-  HorizontalCourseCard
+  ProfileRadioButton,
+  ProfileValue,
+  ProgressBar,
+  TextButton,
+  VerticalCourseCard
 };

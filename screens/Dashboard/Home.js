@@ -57,7 +57,7 @@ const Home = () => {
       >
         {/* Greetings */}
         <View style={{ flex: 1 }}>
-          <Text style={{ ...FONTS.h2 }}>Hello Shade!.</Text>
+          <Text style={{ ...FONTS.h2 }}>Hello Dosu!.</Text>
           <Text
             style={{
               color: COLORS.gray50,

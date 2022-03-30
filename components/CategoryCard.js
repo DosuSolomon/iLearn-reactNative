@@ -21,7 +21,7 @@ const CategoryCard = ({ category, containerStyle}) => {
       >
         <Text
           style={{
-            color: COLORS.primary3,
+            color: COLORS.white,
             ...FONTS.h2
           }}
         >
