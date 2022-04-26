@@ -3,6 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 import { MainLayout } from "./screens";
+import { LoginScreen } from "./screens";
+import { SplashScreen } from "./screens";
+import { SignupScreen } from "./screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,9 +24,12 @@ const App = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"Dashboard"}
+        initialRouteName={"RootStackScreen"}
       >
-        <Stack.Screen name="Dashboard" component={MainLayout} />
+        <Stack.Screen name="RootStackScreen" component={SplashScreen} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="SignupScreen" component={SignupScreen} />
+        <Stack.Screen name="MainLayout" component={MainLayout} />
       </Stack.Navigator>
     </NavigationContainer>
   );

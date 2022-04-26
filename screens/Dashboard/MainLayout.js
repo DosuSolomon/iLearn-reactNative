@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, Animated } from "react-native";
 import { COLORS, SIZES, FONTS, constants } from "../../constants";
-import { Home, Profile, Search } from "../../screens";
+import { Home, Profile, Search, Counseling } from "../../screens";
 import { Shadow } from "react-native-shadow-2";
 
 const bottom_tabs = constants.bottom_tabs.map((bottom_tabs) => ({
@@ -98,7 +98,7 @@ const Tabs = ({ scrollX, onBottomTabPress }) => {
               style={{
                 marginTop: 3,
                 color: COLORS.white,
-                ...FONTS.h3,
+                ...FONTS.h5,
               }}
             >
               {item.label}
@@ -141,6 +141,7 @@ const MainLayout = () => {
               <View style={{ height: SIZES.height, width: SIZES.width }}>
                 {item.label == constants.screens.home && <Home />}
                 {item.label == constants.screens.search && <Search />}
+                {item.label == constants.screens.counseling && <Counseling />}
                 {item.label == constants.screens.profile && <Profile />}
               </View>
             );
@@ -153,7 +154,7 @@ const MainLayout = () => {
     return (
       <View
         style={{
-          marginBottom: 20,
+          marginBottom: 15,
           paddingHorizontal: SIZES.padding,
           paddingVertical: SIZES.radius,
         }}

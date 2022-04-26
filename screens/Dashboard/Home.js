@@ -18,6 +18,7 @@ import {
   dummyData,
 } from "../../constants";
 
+
 const Section = ({ containerStyle, title, onPress, children }) => {
   return (
     <View style={{ ...containerStyle }}>
@@ -57,7 +58,7 @@ const Home = () => {
       >
         {/* Greetings */}
         <View style={{ flex: 1 }}>
-          <Text style={{ ...FONTS.h2 }}>Hello Dosu!.</Text>
+          <Text style={{ ...FONTS.h2 }}>Hello Pelumi!.</Text>
           <Text
             style={{
               color: COLORS.gray50,
@@ -90,7 +91,7 @@ const Home = () => {
         {/* Info */}
         <Text style={{ color: COLORS.white, ...FONTS.body2 }}>HOW TO</Text>
         <Text style={{ color: COLORS.white, ...FONTS.h2 }}>
-          Make your brand more visible with our checklist
+          Choose a major 
         </Text>
         <Text
           style={{
@@ -99,7 +100,7 @@ const Home = () => {
             ...FONTS.body4,
           }}
         >
-          By Scott Harris
+          By David Harris
         </Text>
         {/* Image */}
         <Image
@@ -153,7 +154,7 @@ const Home = () => {
 
   function renderCategories() {
     return (
-      <Section title="Categories">
+      <Section title="Browse Categories">
         <FlatList
           horizontal
           data={dummyData.categories}

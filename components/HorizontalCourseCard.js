@@ -76,7 +76,7 @@ function HorizontalCourseCard({ containerStyle, course }) {
             // marginTop: SIZES.base,
           }}
         >
-          <Text style={{ ...FONTS.body4 }}>By {course.instructor}</Text>
+          <Text style={{ ...FONTS.body4 }}>{course.instructor}</Text>
           <IconLabel
             icon={icons.time}
             label={course.duration}
@@ -99,7 +99,7 @@ function HorizontalCourseCard({ containerStyle, course }) {
               color: COLORS.primary,
             }}
           >
-            ${course.price.toFixed(2)}
+            Rating
           </Text>
           <IconLabel
             icon={icons.star}

@@ -82,6 +82,7 @@ const screens = {
     home: "Home",
     search: "Search",
     profile: "Profile",
+    counseling: "Counseling",
 }
 
 const bottom_tabs = [
@@ -98,6 +99,11 @@ const bottom_tabs = [
     {
         id: 2,
         label: screens.profile,
+        icon: require("../assets/icons/profile.png")
+    },
+    {
+        id: 3,
+        label: screens.counseling,
         icon: require("../assets/icons/profile.png")
     },
     

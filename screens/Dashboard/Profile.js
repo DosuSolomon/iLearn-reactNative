@@ -115,7 +115,7 @@ const Profile = () => {
               ...FONTS.h2,
             }}
           >
-            Dosu
+            Pelumi
           </Text>
           <Text
             style={{
@@ -123,7 +123,7 @@ const Profile = () => {
               ...FONTS.body4,
             }}
           >
-            Full Stack Developer
+            Student
           </Text>
           <ProgressBar
             progress="58%"
@@ -171,12 +171,12 @@ const Profile = () => {
   function renderProfileSection1() {
     return (
       <View style={styles.profileSectionContainer}>
-        <ProfileValue icon={icons.profile} label="Name" value="Dosu Sulaimon" />
+        <ProfileValue icon={icons.profile} label="Name" value="Opeyemi Aiyeola" />
         <LineDivider />
         <ProfileValue
           icon={icons.email}
           label="Email"
-          value="dosusulaimon.s@gmail.com"
+          value="opeyemi.s@gmail.com"
         />
         <LineDivider />
         <ProfileValue

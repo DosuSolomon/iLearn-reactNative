@@ -1,95 +1,143 @@
 const categories = [
-    {
-        id: 0,
-        title: "Mobile Design",
-        thumbnail: require("../assets/images/bg_1.png")
-    },
-    {
-        id: 1,
-        title: "3D Modeling",
-        thumbnail: require("../assets/images/bg_2.png")
-    },
-    {
-        id: 2,
-        title: "Web Designing",
-        thumbnail: require("../assets/images/bg_3.png")
-    },
-    {
-        id: 3,
-        title: "Illustrations",
-        thumbnail: require("../assets/images/bg_4.png")
-    },
-    {
-        id: 4,
-        title: "Drawing",
-        thumbnail: require("../assets/images/bg_5.png")
-    },
-    {
-        id: 5,
-        title: "Animation",
-        thumbnail: require("../assets/images/bg_6.png")
-    }
-]
+  {
+    id: 0,
+    title: "Choosing a Career",
+    thumbnail: require("../assets/images/bg_1.png"),
+  },
+  {
+    id: 1,
+    title: "Career Development",
+    thumbnail: require("../assets/images/bg_2.png"),
+  },
+  {
+    id: 2,
+    title: "Professional Skills",
+    thumbnail: require("../assets/images/bg_3.png"),
+  },
+  {
+    id: 3,
+    title: "Interviews",
+    thumbnail: require("../assets/images/bg_4.png"),
+  },
+  {
+    id: 4,
+    title: "Job Search",
+    thumbnail: require("../assets/images/bg_5.png"),
+  },
+  {
+    id: 5,
+    title: "Counselling",
+    thumbnail: require("../assets/images/bg_6.png"),
+  },
+];
 
 const courses_list_1 = [
     {
         id: 0,
-        title: "Canava Graphic Design Course - Beginner",
+        title: "Mathematics - Become a professional",
         duration: "2h 30m",
         thumbnail: require("../assets/images/thumbnail_1.png")
     },
     {
         id: 1,
-        title: "The Complete Presentation and speech",
+        title: "English - Beginner to expert in writing",
         duration: "1h 30m",
         thumbnail: require("../assets/images/thumbnail_2.png")
     }
 ]
 
 const courses_list_2 = [
-    {
-        id: 0,
-        title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        duration: "2h 30m",
-        instructor: "James Morris",
-        ratings: 4.9,
-        price: 75,
-        is_favourite: true,
-        thumbnail: require("../assets/images/thumbnail_1.png")
-    },
-    {
-        id: 1,
-        title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        duration: "2h 30m",
-        instructor: "James Morris",
-        ratings: 4.9,
-        price: 75,
-        is_favourite: false,
-        thumbnail: require("../assets/images/thumbnail_2.png")
-    },
-    {
-        id: 2,
-        title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        duration: "2h 30m",
-        instructor: "James Morris",
-        ratings: 4.9,
-        price: 75,
-        is_favourite: true,
-        thumbnail: require("../assets/images/thumbnail_3.png")
-    },
-    {
-        id: 3,
-        title: "The Ultimate Ui/Ux Course Beginner to Advanced",
-        duration: "2h 30m",
-        instructor: "James Morris",
-        ratings: 4.9,
-        price: 75,
-        is_favourite: false,
-        thumbnail: require("../assets/images/thumbnail_4.png")
-    },
-    
-    
-]
+  {
+    id: 0,
+    title: "Nursing",
+    duration: "7 years",
+    instructor: "Duration",
+    ratings: 7,
+    price: 75,
+    is_favourite: true,
+    thumbnail: require("../assets/images/nurse.png"),
+  },
+  {
+    id: 1,
+    title: "Mathematics",
+    duration: "4 years",
+    instructor: "Duration",
+    ratings: 5,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/mathematics.png"),
+  },
+  {
+    id: 2,
+    title: "Computer Science",
+    duration: "5 years",
+    instructor: "Duration",
+    ratings: 6,
+    price: 75,
+    is_favourite: true,
+    thumbnail: require("../assets/images/comp_science.png"),
+  },
+  {
+    id: 3,
+    title: "Mechanical Engineering",
+    duration: "5 years",
+    instructor: "Duration",
+    ratings: 6,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/mech_ng.png"),
+  },
+  {
+    id: 4,
+    title: "Marketing / Business Studies",
+    duration: "4 years",
+    instructor: "Duration",
+    ratings: 4,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/thumbnail_4.png"),
+  },
+  {
+    id: 5,
+    title: "Law",
+    duration: "6 years",
+    instructor: "Duration",
+    ratings: 7,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/law.jpg"),
+  },
+  {
+    id: 6,
+    title: "Accounting",
+    duration: "4 years",
+    instructor: "Duration",
+    ratings: 5,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/accounting.jpg"),
+  },
+  {
+    id: 7,
+    title: "Architecture",
+    duration: "5 years",
+    instructor: "Duration",
+    ratings: 5,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/architectural.jpg"),
+  },
+  {
+    id: 8,
+    title: "Medicine",
+    duration: "7 years",
+    instructor: "Duration",
+    ratings: 8,
+    price: 75,
+    is_favourite: false,
+    thumbnail: require("../assets/images/medicine.jpg"),
+  },
+];
 
 const top_searches = [
     {
